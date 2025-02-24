@@ -105,7 +105,7 @@ export default function LoginScreen() {
                     Click here
                     </span>
                 </p>
-                {isLoadingPassword && <Spinner />}
+                {isLoadingPassword && <h2 className='text-blue-700'>Loading..</h2>}
                 <div className="flex items-center space-x-3 mt-4">
     <button
         type='submit'
@@ -124,7 +124,7 @@ export default function LoginScreen() {
     </button>
 </div>
 
-                {isLoading && <Spinner />}
+                {isLoading && <h2 className='text-blue-700'>Loading</h2>}
             </form>
             <p className="mt-4">
                 Don't have an account? <Link to="/register" className="text-blue-500">Register here</Link>.
