@@ -34,7 +34,7 @@ const CategoryPage = () => {
       try {
         setLoading(true);
         const response = await fetch(
-          `http://localhost:5000/api/products/category/${backendCategory}`
+          `https://buynest.onrender.com/api/products/category/${backendCategory}`
         );
         if (!response.ok) throw new Error("Failed to fetch products");
         const data = await response.json();

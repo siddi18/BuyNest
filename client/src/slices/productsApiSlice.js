@@ -12,7 +12,7 @@ export const productsApiSlice = apiSlice.injectEndpoints({
     }),
     getAdminProducts: builder.query({
       query: ({keyword, pageNumber}) => ({
-        url: 'http://localhost:5000/api/admin',
+        url: 'https://buynest.onrender.com/api/admin',
         params: {keyword, pageNumber}
       }),
       keepUnusedDataFor: 5, // Optional: Cache data for 5 minutes
@@ -41,7 +41,7 @@ export const productsApiSlice = apiSlice.injectEndpoints({
     }),
     uploadFileHandler: builder.mutation({
       query: data => ({
-        url: "http://localhost:5000/api/upload",
+        url: "https://buynest.onrender.com/api/upload",
         method: "POST",
         body: data,
       }),

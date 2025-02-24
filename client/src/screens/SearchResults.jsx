@@ -12,7 +12,7 @@ const SearchResults = () => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        const { data } = await axios.get(`http://localhost:5000/api/products?search=${keyword}`);
+        const { data } = await axios.get(`https://buynest.onrender.com/api/products?search=${keyword}`);
         setProducts(data);
       } catch (err) {
         setError("Failed to fetch products. Please try again.");

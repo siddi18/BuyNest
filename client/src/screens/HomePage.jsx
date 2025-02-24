@@ -14,7 +14,7 @@
 //   useEffect(() => {
 //     const fetchMensKurta = async () => {
 //       try {
-//         const response = await fetch("http://localhost:5000/api/products/category/Kurthas");
+//         const response = await fetch("https://buynest.onrender.com/api/products/category/Kurthas");
 //         const data = await response.json();
 //         setMensKurta(data);
 //       } catch (error) {
@@ -57,12 +57,12 @@
 //     const fetchProducts = async () => {
 //       try {
 //         const urls = [
-//           { stateSetter: setMensKurta, url: "http://localhost:5000/api/products/category/Kurthas" },
-//           { stateSetter: setMensShoes, url: "http://localhost:5000/api/products/category/MensShoes" },
-//           { stateSetter: setLengha, url: "http://localhost:5000/api/products/category/womensLehengaCholi" },
-//           { stateSetter: setDresses, url: "http://localhost:5000/api/products/category/Dress" },
-//           { stateSetter: setGowns, url: "http://localhost:5000/api/products/category/Gown" },
-//           { stateSetter: setWomensKurtas, url: "http://localhost:5000/api/products/category/womensKurtha" }
+//           { stateSetter: setMensKurta, url: "https://buynest.onrender.com/api/products/category/Kurthas" },
+//           { stateSetter: setMensShoes, url: "https://buynest.onrender.com/api/products/category/MensShoes" },
+//           { stateSetter: setLengha, url: "https://buynest.onrender.com/api/products/category/womensLehengaCholi" },
+//           { stateSetter: setDresses, url: "https://buynest.onrender.com/api/products/category/Dress" },
+//           { stateSetter: setGowns, url: "https://buynest.onrender.com/api/products/category/Gown" },
+//           { stateSetter: setWomensKurtas, url: "https://buynest.onrender.com/api/products/category/womensKurtha" }
 //         ];
 
 //         // Fetch all categories in parallel
@@ -116,12 +116,12 @@ const Homepage = () => {
     const fetchProducts = async () => {
       try {
         const urls = [
-          { key: "mensKurta", setter: setMensKurta, url: "http://localhost:5000/api/products/category/Kurthas" },
-          { key: "mensShoes", setter: setMensShoes, url: "http://localhost:5000/api/products/category/MensShoes" },
-          { key: "lengha", setter: setLengha, url: "http://localhost:5000/api/products/category/womensLehengaCholi" },
-          { key: "dresses", setter: setDresses, url: "http://localhost:5000/api/products/category/Dress" },
-          { key: "gowns", setter: setGowns, url: "http://localhost:5000/api/products/category/Gown" },
-          { key: "womensKurtas", setter: setWomensKurtas, url: "http://localhost:5000/api/products/category/womensKurtha" }
+          { key: "mensKurta", setter: setMensKurta, url: "https://buynest.onrender.com/api/products/category/Kurthas" },
+          { key: "mensShoes", setter: setMensShoes, url: "https://buynest.onrender.com/api/products/category/MensShoes" },
+          { key: "lengha", setter: setLengha, url: "https://buynest.onrender.com/api/products/category/womensLehengaCholi" },
+          { key: "dresses", setter: setDresses, url: "https://buynest.onrender.com/api/products/category/Dress" },
+          { key: "gowns", setter: setGowns, url: "https://buynest.onrender.com/api/products/category/Gown" },
+          { key: "womensKurtas", setter: setWomensKurtas, url: "https://buynest.onrender.com/api/products/category/womensKurtha" }
         ];
 
         const responses = await Promise.all(

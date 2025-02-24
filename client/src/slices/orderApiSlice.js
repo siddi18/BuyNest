@@ -22,7 +22,7 @@ export const orderApiSlice = apiSlice.injectEndpoints({
         console.log('userId from getuser 1:', id)
        
         return {
-          url: 'http://localhost:5000/api/orders/user-orders',
+          url: 'https://buynest.onrender.com/api/orders/user-orders',
           headers: {
             Authorization: id,
           },

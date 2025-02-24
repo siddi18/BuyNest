@@ -9,7 +9,7 @@ export default defineConfig({
     //   outDir: 'dist', // Specify the output directory
     // },
     proxy: {
-      '/api': 'http://localhost:5000',
+      '/api': 'https://buynest.onrender.com',
       '/upload': 'https://sidtech.onrender.com'
     },
   }
