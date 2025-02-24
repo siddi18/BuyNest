@@ -3,7 +3,6 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { useResetPasswordMutation } from '../slices/userApiSlice'
 import { toast } from "react-toastify"
-import Spinner from '../components/Spinner.jsx'
 
 export default function ResetPassword() {
     const { resetToken } = useParams()
@@ -58,7 +57,7 @@ export default function ResetPassword() {
                 >
                     Submit
                 </button>
-                {isLoading && <Spinner />}
+                {isLoading && <h2 className='text-blue-700'>Loading...</h2>}
             </form >
         </div>
     )

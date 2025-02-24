@@ -98,7 +98,7 @@ const updateUserProfile = asyncHandler(async (req, res) => {
     const resetToken = user.createPasswordResetToken()
     user.save()
   
-    const resetUrl = `${req.protocol}://localhost:3000/reset-password/${resetToken}`
+    const resetUrl = `${req.protocol}://buynest.onrender.com/reset-password/${resetToken}`
   
     const message = `Forgot Password? Click on this this link to reset your Password: ${resetUrl}`
   
@@ -110,7 +110,7 @@ const updateUserProfile = asyncHandler(async (req, res) => {
       })
   
       res.status(200).json({
-        message: "Token Sent to email!",
+        message: "Reset url Sent to email!",
       })
     } catch (error) {
       user.passwordResetToken = undefined
