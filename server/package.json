@@ -5,13 +5,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server/server.js",
-    "server": "nodemon server/server.js",
-    "client": "npm run dev --prefix client",
-    "data:import": "node server/seeder",
-    "data:destroy": "node server/seeder -d",
-    "build": "npm install && npm install --prefix client --production=false && npm run build --prefix client"
-},
+    "start": "node server",
+    "dev": "nodemon server",
+    "data:import": "node seeder",
+    "data:destroy": "node seeder -d"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
