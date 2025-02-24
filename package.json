@@ -3,15 +3,14 @@
     "version": "1.0.0",
     "description": "",
     "main": "server.js",
-"scripts": {
-    "start": "node server/server.js",
-    "server": "nodemon server/server.js",
-    "client": "npm run dev --prefix client",
-    "data:import": "node server/seeder",
-    "data:destroy": "node server/seeder -d",
-    "build": "npm install && npm install --prefix client --production=false && npm run build --prefix client && npm install --prefix server && npm run build --prefix server"
-},
-
+    "scripts": {
+        "start": "node server/server.js",
+        "server": "nodemon server/server.js",
+        "client": "npm run dev --prefix client",
+        "data:import": "node server/seeder",
+        "data:destroy": "node server/seeder -d",
+        "build": "npm install && npm install --prefix client --production=false && npm run build --prefix client"
+    },
     "keywords": [],
     "author": "",
     "license": "ISC",
