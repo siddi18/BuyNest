@@ -18,13 +18,13 @@ export default function LoginScreen() {
 
     const { search } = useLocation()
     const sp = new URLSearchParams(search)
-    const redirect = sp.get("redirect") || "/"
+    const redirect = sp.get("redirect") || "/";
 
     useEffect(() => {
         if (userInfo) {
-            navigate(redirect)
+            navigate(redirect, { replace: true });
         }
-    }, [navigate, redirect, userInfo])
+    }, [navigate, redirect, userInfo]);
 
 
       useEffect(() => {
