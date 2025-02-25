@@ -133,7 +133,7 @@ const HomeProductSection = ({ section, data, isLoading }) => {
   };
 
   const responsive = {
-    0: { items: 1, itemsFit: "contain" },
+    0: { items: 1.2, itemsFit: "contain" },
     568: { items: 3, itemsFit: "contain" },
     1024: { items: 4.5, itemsFit: "contain" }, // Ensure at least 5 items show
   };
