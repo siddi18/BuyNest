@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { setCredentials } from '../slices/userSlice'
 import { toast } from 'react-toastify'
-import Spinner from '../components/Spinner'
 import { useForgotPasswordMutation } from "../slices/userApiSlice"
 import { BACKEND_URL } from '../constants'
 import { FcGoogle } from "react-icons/fc";

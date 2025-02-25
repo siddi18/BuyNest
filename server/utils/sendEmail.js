@@ -1,3 +1,5 @@
+// these are the two ways of sending mails: 1.mailtrap smtp 2.gmail smtp
+
 
 // const sendEmail = async options => {
 //   const transporter = nodemailer.createTransport({
