@@ -77,42 +77,42 @@ const Header = () => {
 
 
           {/* 🔹 Desktop Search Bar (Hidden on Mobile) */}
-          {!userInfo?.isAdmin && (
-           location.pathname === "/login" || "/register" ? null : (<form
-           onSubmit={handleSearch}
-           className="hidden md:flex mx-6 items-center bg-white px-4 py-2 rounded-md shadow-md border border-blue-700 w-[250px] md:w-86"
-         >
-         
-          
-              {/* 🔹 Search Icon */}
-              <button type="submit" className="text-blue-700 mr-2 cursor-pointer">
-                <FiSearch size={20} />
-              </button>
+          {!userInfo?.isAdmin && 
+  location.pathname !== "/login" && location.pathname !== "/register" && (
+    <form
+      onSubmit={handleSearch}
+      className="hidden md:flex mx-6 items-center bg-white px-4 py-2 rounded-md shadow-md border border-blue-700 w-[250px] md:w-86"
+    >
+      {/* 🔹 Search Icon */}
+      <button type="submit" className="text-blue-700 mr-2 cursor-pointer">
+        <FiSearch size={20} />
+      </button>
 
-              {/* 🔹 Input Field with Dynamic Placeholder */}
-              <input
-                type="text"
-                placeholder={!isStopped ? "" : "Search..."}
-                className="bg-transparent text-black outline-none w-full"
-                value={keyword}
-                onChange={(e) => setKeyword(e.target.value)}
-                onFocus={() => setIsStopped(true)}
-                onBlur={() => setIsStopped(false)}
-              />
+      {/* 🔹 Input Field with Dynamic Placeholder */}
+      <input
+        type="text"
+        placeholder={!isStopped ? "" : "Search..."}
+        className="bg-transparent text-black outline-none w-full"
+        value={keyword}
+        onChange={(e) => setKeyword(e.target.value)}
+        onFocus={() => setIsStopped(true)}
+        onBlur={() => setIsStopped(false)}
+      />
 
-              {/* 🔹 Type Animation for Placeholder */}
-              {!isStopped && (
-                <TypeAnimation
-                  sequence={categoryNames.flatMap((name) => [name, 1000, "", 500])}
-                  wrapper="span"
-                  speed={50}
-                  repeat={Infinity}
-                  className="text-gray-400 text-sm cursor-pointer"
-                />
-              )}
-            </form>
-           )
-          )}
+      {/* 🔹 Type Animation for Placeholder */}
+      {!isStopped && (
+        <TypeAnimation
+          sequence={categoryNames.flatMap((name) => [name, 1000, "", 500])}
+          wrapper="span"
+          speed={50}
+          repeat={Infinity}
+          className="text-gray-400 text-sm cursor-pointer"
+        />
+      )}
+    </form>
+  )
+}
+
 
           {/* 🔹 Right Side Icons with Spacing */}
           <div className="flex items-center space-x-6">
