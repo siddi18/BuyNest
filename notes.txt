@@ -1,4 +1,1 @@
-changes:
-1. server.js - cors origin
 
-by removing the Root directory - optional in render my deployment is successful.
